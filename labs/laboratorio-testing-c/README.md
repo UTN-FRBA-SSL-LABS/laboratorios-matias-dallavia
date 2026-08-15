@@ -81,7 +81,7 @@ Vas a ver el carrito con tres productos y su total.
 > R: $2050
 
 ```
-TOTAL_PROGRAMA=$2050
+TOTAL_PROGRAMA=2050
 ```
 _(escribí el número que imprimió el programa)_
 
@@ -366,12 +366,12 @@ _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 > R: El bug era que no se tenia en cuanta la cantidad del producto, pero en test_total_precio_unitario la cantidad es uno por lo no importaba que no se multiplique por la cantidad
 
 ```
-BUG_EN_FUNCION_1=test_total_con_cantidad
+BUG_EN_FUNCION_1=carrito_total
 ```
 _(nombre de la función con el primer bug)_
 
 ```
-BUG_EN_FUNCION_2=test_compra_con_descuento
+BUG_EN_FUNCION_2=carrito_agregar
 ```
 _(nombre de la función con el segundo bug)_
 
