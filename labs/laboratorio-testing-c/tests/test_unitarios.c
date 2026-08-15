@@ -55,7 +55,7 @@ void test_carrito_lleno(void){
     printf("\n[agregar mas productos que el limite de carrito]\n");
     Carrito c;
     carrito_init(&c);
-    Producto p = {"Leche", 350, MAX_ITEMS};  /* 350 x 2 = 700 */
+    Producto p = {"Leche", 350, 1};  /* 350 x 2 = 700 */
     carrito_agregar(&c, p);
     carrito_agregar(&c, p);
     carrito_agregar(&c, p);
