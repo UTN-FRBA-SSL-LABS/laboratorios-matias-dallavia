@@ -338,10 +338,10 @@ Las líneas con `#####` nunca se ejecutaron — no están cubiertas por los test
 
 **P10** — ¿Hay alguna línea de `carrito.c` con `#####`? ¿Cuál y por qué no se ejecutó?
 
-> R:
+> R: No hay ninguna con #####
 
 ```
-COBERTURA_COMPLETA=
+COBERTURA_COMPLETA=SI
 ```
 _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 
@@ -351,27 +351,27 @@ _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 
 **P11** — ¿Qué diferencia hay entre un test unitario y uno de integración? ¿Cuál de los dos detectó primero el bug de `carrito_total`?
 
-> R:
+> R: Los tests unitarios controlan modulos unicamente, mientras que los tests de integracion evaluan varios modulos y como interactuan entre si. El bug fue detecato por un test unitario
 
 **P12** — El bug de capacidad en `carrito_agregar` causa un **buffer overflow**: se escribe más allá del array. ¿Por qué esto es peligroso en C pero no ocurriría en un lenguaje como Python o Java?
 
-> R:
+> R: Porque C no controla que no sobrepase los limites de un array como si lo hacen python y java durante tiempo de ejecucion. Esto termina sobreescribiendo celdas de memorias contiguas , llegando a perder la informacion que contengan.
 
 **P13** — En este laboratorio encontraste los bugs escribiendo tests. ¿Qué tiene de mejor este enfoque frente a mirar el código directamente?
 
-> R:
+> R: Al querer volver a saber si el codigo esta roto nuevamente no debo hacerlo manualmente otra vez, puedo simplemente correr los tests de nuevo.
 
 **P14** — El test `test_total_precio_unitario` (cantidad = 1) **pasó** a pesar del bug, mientras que `test_total_con_cantidad` (cantidad = 2) **falló**. ¿Por qué el primer test no detectó el bug?
 
-> R:
+> R: El bug era que no se tenia en cuanta la cantidad del producto, pero en test_total_precio_unitario la cantidad es uno por lo no importaba que no se multiplique por la cantidad
 
 ```
-BUG_EN_FUNCION_1=
+BUG_EN_FUNCION_1=test_total_con_cantidad
 ```
 _(nombre de la función con el primer bug)_
 
 ```
-BUG_EN_FUNCION_2=
+BUG_EN_FUNCION_2=test_compra_con_descuento
 ```
 _(nombre de la función con el segundo bug)_
 
